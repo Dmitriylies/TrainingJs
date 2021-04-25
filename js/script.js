@@ -24,3 +24,5 @@ const category = 'toys';
 console.log('https://someurl.com/' + category);
 
 console.log(100%6);
+
+console.log('1');

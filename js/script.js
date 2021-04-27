@@ -9,20 +9,38 @@
 //
 //let arr = ['plem.jpg', 'orange.png', 'apple.bmp', {}, ['1', '3', 4]];
 //console.log(arr[4]);
+//
+//const arr = [];
+//
+// arr[0]= prompt('are you here?', '');
+// arr[1] = prompt('are you here1', '');
+// arr[2] = prompt('are you here2?', '');
+//
+//
+//document.write(arr)
+//
+//const category = 'toys';
+//
+//console.log('https://someurl.com/' + category);
+//
+//console.log(100%6);
+//
+//console.log('1');
 
-const arr = [];
+if (1) {
+    console.log('ok!');
+} else {
+    console.log('error');
+    
+}
+const num = 50;
 
- arr[0]= prompt('are you here?', '');
- arr[1] = prompt('are you here1', '');
- arr[2] = prompt('are you here2?', '');
+if (num < 49) {
+    console.log('Error');
+} else if (num > 100){
+    console.log('too much');
+} else {
+    console.log('ok!');
+} 
 
-
-document.write(arr)
-
-const category = 'toys';
-
-console.log('https://someurl.com/' + category);
-
-console.log(100%6);
-
-console.log('1');
+(num === 50) ?  console.log('ok!') : console.log('Error');

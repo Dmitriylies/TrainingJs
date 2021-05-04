@@ -44,3 +44,20 @@ if (num < 49) {
 } 
 
 (num === 50) ?  console.log('ok!') : console.log('Error');
+
+const logg = 12.6;
+
+console.log(Math.round(logg));
+
+
+function lernJs (lang, callback) {
+    console.log(`eefrfr ${lang}`);
+    callback();
+}
+
+function second() {
+    console.log('second');
+    
+}
+
+lernJs('Js', second);

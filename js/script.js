@@ -93,3 +93,11 @@ console.log(Object.keys(options).length);
 const t = "hello";
 
 console.log(t.length);
+
+
+const arr = [1, 2, 3, 4, 5, 6]; 
+
+arr.forEach((item, i, arr) => {
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+    
+});

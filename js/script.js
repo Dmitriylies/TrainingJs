@@ -1,103 +1,89 @@
-//console.log(1);
-//const obj =  {
-//    name: 'John',
-//    age: '25',
-//    isMarried: false
-//};
-//
-//console.log(obj['name']);
-//
-//let arr = ['plem.jpg', 'orange.png', 'apple.bmp', {}, ['1', '3', 4]];
-//console.log(arr[4]);
-//
-//const arr = [];
-//
-// arr[0]= prompt('are you here?', '');
-// arr[1] = prompt('are you here1', '');
-// arr[2] = prompt('are you here2?', '');
-//
-//
-//document.write(arr)
-//
-//const category = 'toys';
-//
-//console.log('https://someurl.com/' + category);
-//
-//console.log(100%6);
-//
-//console.log('1');
+let a = 5,
+    b = a;
 
-if (1) {
-    console.log('ok!');
-} else {
-    console.log('error');
-    
-}
-const num = 50;
+b = b + 5;
 
-if (num < 49) {
-    console.log('Error');
-} else if (num > 100){
-    console.log('too much');
-} else {
-    console.log('ok!');
-} 
+console.log(a);
+console.log(b);
 
-(num === 50) ?  console.log('ok!') : console.log('Error');
+const obj = {
+    a: 5,
+    b: 1
+};
 
-const logg = 12.6;
+const copy = obj;
 
-console.log(Math.round(logg));
+copy.a = 10;
+console.log(obj);
+console.log(copy);
 
+//перебор объекта, для его копирования.
 
-function lernJs (lang, callback) {
-    console.log(`eefrfr ${lang}`);
-    callback();
+function сopy (mainObj) {
+   let objCopy = {};
+   
+   let key;
+   for (key in mainObj) {
+    objCopy[key] = mainObj[key];
+   }
+
+   return objCopy;
 }
 
-function second() {
-    console.log('second');
-    
-}
-
-lernJs('Js', second);
-
-//const obj = new Object() ; //- один из вариантов создания объекта
-
-
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        botrder: 'black',
-        bg: 'red'
+const num = {
+    a: 2,
+    b: 6,
+    c: {
+        d: 54,
+        e: 22
     }
+};
+
+//const numCopy = сopy(num);;
+//
+//numCopy.a = 67;
+//
+//console.log(num);
+//
+//console.log(numCopy);
+
+
+const add = {
+    f: 33,
+    g:99
 } ;
 
+const done = Object.assign(num, add);
 
-for (let key in options){
-    if (typeof(options[key]) === 'object') {
-        for (let i in options[key]){
-            console.log(`свойство ${i} имеет значение ${options[key][i]}`);
-        }
-    } else {
-        console.log(`свойство ${key} имеет значение ${options[key]}`);
-    }
-   
+done.a = 506;
+
+const done1 = Object.assign({}, done);
+done1.a = 5056;
+
+console.log(num);
+console.log(add);
+console.log(done);
+console.log(done1);
+
+const add1 = {
+    f: 33,
+    g:99
+} ;
+
+const add2 = {...add1};
+
+add2.g = 0;
+
+
+console.log(add2);
+console.log(add1);
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
 
-console.log(Object.keys(options).length);
+const nun = [2, 5, 43];
 
-
-const t = "hello";
-
-console.log(t.length);
-
-
-const arr = [1, 2, 3, 4, 5, 6]; 
-
-arr.forEach((item, i, arr) => {
-    console.log(`${i}: ${item} внутри массива ${arr}`);
-    
-});
+log(...nun);
